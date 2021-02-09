@@ -1,21 +1,18 @@
 #include "holberton.h"
 /**
 * _islower - lowercase or otherwise
+*
 *@c: The character to print
 *
 * Return: Always 0.
 */
 int _islower(int c)
 {
-	if (c >= 96)
+	if (c >= 97 && c <= 122)
 	{
 		return (1);
 	}
-	else if (c <= 122)
-	{
-		return (1);
-	}
-	else
+	else 
 	{
 		return (0);
 	}

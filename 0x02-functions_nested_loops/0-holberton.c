@@ -10,7 +10,7 @@ int main(void)
 	char hol[10] = "Holberton\n";
 	int pos;
 
-	for (pos = 0; pos <= 9; pos++)
+	for (pos = 0; pos < 10; pos++)
 	{
 		_putchar(hol[pos]);
 	}

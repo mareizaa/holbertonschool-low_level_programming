@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *_isupper - checks for uppercase
+ *_isdigit - checks for a digit
  *
  *@c: print character
  *

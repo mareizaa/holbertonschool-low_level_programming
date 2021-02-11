@@ -14,14 +14,26 @@ void times_table(void)
 		for (c = 0; c <= 9; c++)
 		{
 			r = (f * c);
-			_putchar('0' + r);
-		}
-		if (r <= 9)
-		{
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
-			_putchar('0' + r);
+			if (r < 10)
+			{
+				_putchar('0' + r);
+				if (c <= 8)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+			}
+			else
+			{
+				_putchar((r / 10) + '0');
+				_putchar((r % 10) + '0');
+				if (c <= 8)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+			}
 		}
 		_putchar('\n');
 	}

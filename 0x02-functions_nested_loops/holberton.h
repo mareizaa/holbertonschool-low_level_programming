@@ -15,6 +15,8 @@ int print_sign(int n);
 int _abs(int);
 /*prints the last digit of a number */
 int print_last_digit(int);
+/* prints every minute of the day */
+void jack_bauer(void);
 /*adds two integers and returns the result */
 int add(int, int);
 /* prints all natural numbers from n to 98, followed by a new line */

@@ -15,14 +15,14 @@ void times_table(void)
 		{
 			r = (f * c);
 			_putchar('0' + r);
-		}		
+		}
 		if (r <= 9)
 		{
 			_putchar(',');
 			_putchar(' ');
 			_putchar(' ');
 			_putchar('0' + r);
-		}  
+		}
 		_putchar('\n');
 	}
 }

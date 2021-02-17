@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *reset_to_98 - updates the value it points to 98
+ *swap_int - function that swaps the values of two integers
  *
  *@a: print character
  *@b: print character

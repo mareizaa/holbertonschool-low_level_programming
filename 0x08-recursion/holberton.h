@@ -12,6 +12,8 @@ int factorial(int n);
 int _pow_recursion(int x, int y);
 /* returns the natural square root of a number */
 int _sqrt_recursion(int n);
+/* funtion create */
+int _compare(int number, int aux);
 /* returns 1 if the input integer is a prime number, otherwise return 0 */
 int is_prime_number(int n);
 /* returns 1 if a string is a palindrome and 0 if not */

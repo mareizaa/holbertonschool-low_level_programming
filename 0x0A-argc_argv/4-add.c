@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - print main
  * @argc: size argv
@@ -10,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int i, add = 0;
 
-	if (argv[0] < 0)
+	if (*argv[0] < 0)
 	{
 		printf("0\n");
 	}

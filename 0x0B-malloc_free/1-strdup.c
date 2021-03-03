@@ -29,7 +29,7 @@ char *_strdup(char *str)
 		p[r] = str[r];
 	}
 
-	if (p == '\n')
+	if (p == '\0')
 	{
 		return ('\0');
 	}

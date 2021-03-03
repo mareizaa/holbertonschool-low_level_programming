@@ -28,5 +28,10 @@ char *_strdup(char *str)
 	{
 		p[r] = str[r];
 	}
+
+	if (p == '\n')
+	{
+		return ('\0');
+	}
 	return (p);
 }

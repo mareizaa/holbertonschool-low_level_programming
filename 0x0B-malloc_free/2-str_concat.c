@@ -14,6 +14,14 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 	int ls1, ls2, s1s2, c1, c2;
 
+	if (s1 == '\0')
+	{
+		s1 = "":
+	}
+	if (s2 == '\0')
+	{
+		s2 = "":
+	}
 	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 	{
 	}
@@ -22,7 +30,10 @@ char *str_concat(char *s1, char *s2)
 	}
 	s1s2 = (ls1 + ls2 + 1);
 	p = malloc(s1s2 * sizeof(char));
-
+	if (p == '\0')
+	{
+		return (0);
+	}
 	for (c1 = 0; s1[c1] != '\0'; c1++)
 	{
 		p[c1] = s1[c1];

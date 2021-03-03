@@ -17,7 +17,7 @@ char *_strdup(char *str)
 	{
 	}
 
-	p = (char *)malloc((l + 1) * sizeof(char));
+	p = malloc((l + 1) * sizeof(char));
 
 	if (str == '\0')
 	{

@@ -39,9 +39,5 @@ int **alloc_grid(int width, int height)
 			p[r1][r2] = 0;
 		}
 	}
-	if (p == '\0')
-	{
-		free(p);
-	}	
 	return (p);
 }

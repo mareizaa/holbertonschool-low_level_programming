@@ -23,9 +23,10 @@ int *array_range(int min, int max)
 	{
 		return ('\0');
 	}
-	for (run = 0; run <= max; run++)
+	for (run = 0; run < max; run++)
 	{
-		p[run] = min++;
+		p[run] = min;
+		min++;
 	}
 	return (p);
 }

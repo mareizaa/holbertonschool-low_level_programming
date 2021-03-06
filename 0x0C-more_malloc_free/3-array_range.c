@@ -19,14 +19,17 @@ int *array_range(int min, int max)
 	{
 		return ('\0');
 	}
-
-	for (s = min; s <= max; s++)
-	{}
-
-	pt = malloc(s * sizeof(int));
-	if (pt == '\0')
+	if (min < 0)
 	{
 		return ('\0');
+	}
+	
+	for (s = min; s <= max; s++)
+	{}
+	pt = malloc(s * sizeof(int));
+	if (pt == NULL)
+	{
+		return (NULL);
 	}
 	for (run = 0; run < max; run++)
 	{

@@ -14,9 +14,10 @@ int *array_range(int min, int max)
 	int *pt;
 	int run;
 	int s;
-
-	for (s = min; s <= max; s++)
-	{}
+	if (min < max)
+	{
+		for (s = min; s <= max; s++);
+	}
 	if (min > max)
 	{
 		return ('\0');

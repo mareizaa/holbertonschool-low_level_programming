@@ -13,6 +13,11 @@ char *cap_string(char *str)
 
 	for (l = 0; str[l] != '\0'; l++)
 	{
+		if (l == 0)
+		{
+			str[l] = str[l] - 32;
+		}
+
 		for (l2 = 0; esp[l2] != '\0'; l2++)
 		{
 			if (str[l] == esp[l2])

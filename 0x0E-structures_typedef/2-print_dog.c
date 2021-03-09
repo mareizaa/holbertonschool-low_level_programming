@@ -11,27 +11,15 @@ void print_dog(struct dog *d)
 	{
 		if ((*d).name != '\0')
 		{
-			printf("Name: %s\n", (*d).name);
-		}
-		else
-		{
-			printf("Name: %p\n", (*d).name);
+			printf("Name: %s\nAge: %f\nOwner: %s\n", (*d).name, (*d).age, (*d).owner);
 		}
 		if ((*d).age != '\0')
 		{
-			printf("Age: %f\n", (*d).age);
-		}
-		else
-		{
-			printf("Name: %p\n", (*d).age);
+			printf("Name: %s\nAge: %f\nOwner: %s\n", (*d).name, (*d).age, (*d).owner);
 		}
 		if ((*d).owner != '\0')
 		{
-			printf("Owner: %s\n", (*d).owner);
-		}
-		else
-		{
-			printf("Name: %p\n", (*d).owner);
+			printf("Name: %s\nAge: %f\nOwner: %s\n", (*d).owner);
 		}
 	}
 }

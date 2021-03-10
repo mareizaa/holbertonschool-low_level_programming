@@ -2,24 +2,26 @@
 
 /**
  *rot13 - encodes a string
- *@s: string
+ *@str: string
  *
  *Return: Always 0.
  */
-char *rot13(char *s)
+char *rot13(char *str)
 {
-	int l;
+	int l, l2;
+	char esp[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char cam[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (l = 0; s[l] != '\0'; l++)
+	for (l = 0; str[l] != '\0'; l++)
 	{
-		if ((s[l] >= 97 && s[l] <= 109) || (s[l] >= 65 && s[l] <= 77))
+		for (l2 = 0; esp[l2] != '\0'; l2++)
 		{
-			s[l] = s[l] + 13;
-		}
-		else if ((s[l] >= 110 && s[l] <= 122) || (s[l] >= 78 && s[l] <= 90))
-		{
-			s[l] = s[l] - 13;
+			if (str[l] == esp[l2])
+			{
+				str[l] = cam[l2];
+				break;
+			}
 		}
 	}
-	return (s);
+	return (str);
 }

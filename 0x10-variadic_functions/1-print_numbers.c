@@ -12,10 +12,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_list values;
 
-	if (n == '\0')
-	{
-		return;
-	}
 	va_start(values, n);
 
 	for (c = 0; c < n; c++)

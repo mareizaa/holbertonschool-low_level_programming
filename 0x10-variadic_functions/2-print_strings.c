@@ -9,6 +9,7 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int c;
+	char *copy;
 
 	va_list values;
 
@@ -16,9 +17,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (c = 0; c < n; c++)
 	{
-		if (separator != NULL)
+		copy = va_arg(values, char *);
+		if (copy == NULL)
 		{
-			printf("%s", va_arg(values, char *));
+			printf("(nil)");
+		}
+		if (separator != NULL && copy != NULL)
+		{
+			printf("%s", copy);
 			if (c < n - 1)
 			{
 				printf("%s", separator);

@@ -22,9 +22,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("(nil)");
 		}
-		if (separator != NULL && copy != NULL)
+		else
 		{
 			printf("%s", copy);
+		}
+		if (separator != NULL)
+		{
 			if (c < n - 1)
 			{
 				printf("%s", separator);

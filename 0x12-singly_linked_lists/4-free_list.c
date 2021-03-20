@@ -9,11 +9,6 @@ void free_list(list_t *head)
 {
 	list_t *aux;
 
-	if (head == NULL)
-	{
-		return (NULL);
-	}
-	
 	while (head != NULL)
 	{
 		aux = head;

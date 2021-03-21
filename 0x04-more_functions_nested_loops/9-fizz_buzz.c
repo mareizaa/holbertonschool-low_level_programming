@@ -21,7 +21,7 @@ int main(void)
 		}
 		else if (run % 5 == 0 && run % 3 == 0)
 		{
-			printf("Fizz Buzz");
+			printf("FizzBuzz");
 		}
 		else
 		{

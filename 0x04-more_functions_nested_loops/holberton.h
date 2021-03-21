@@ -18,3 +18,4 @@ void print_line(int n);
 void print_diagonal(int n);
 /* prints a square, followed by a new line */
 void print_square(int size);
+void print_triangle(int size);

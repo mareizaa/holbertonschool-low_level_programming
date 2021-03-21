@@ -11,17 +11,17 @@ int main(void)
 
 	for (run = 1; run <= 100; run++)
 	{
-		if (run % 3 == 0)
+		if (run % 5 == 0 && run % 3 == 0)
+		{
+			printf("FizzBuzz");
+		}
+		else if (run % 3 == 0)
 		{
 			printf("Fizz");
 		}
 		else if (run % 5 == 0)
 		{
 			printf("Buzz");
-		}
-		else if (run % 5 == 0 && run % 3 == 0)
-		{
-			printf("FizzBuzz");
 		}
 		else
 		{

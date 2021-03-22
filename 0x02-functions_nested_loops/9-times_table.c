@@ -2,7 +2,7 @@
 /**
 * times_table - prints the 9 times table
 *
-* Return: Always 0.
+* Return: Always 0
 */
 
 void times_table(void)
@@ -19,15 +19,15 @@ void times_table(void)
 				if (resultado != 0 && resultado <= 9 && horizontal <= 9)
 				{
 					_putchar(',');
-					_putchar('.');
-					_putchar('.');
+					_putchar(' ');
+					_putchar(' ');
 				}
 				_putchar('0' + resultado);
 				if (resultado == 0 && horizontal <= 8 && vertical == 0)
 				{
 					_putchar(',');
-					_putchar('.');
-					_putchar('.');
+					_putchar(' ');
+					_putchar(' ');
 				}
 			}
 			else
@@ -35,7 +35,7 @@ void times_table(void)
 				if (resultado >= 10 && horizontal <= 9)
 				{
 					_putchar(',');
-					_putchar('.');
+					_putchar(' ');
 				}
 				_putchar((resultado / 10) + '0');
 				_putchar((resultado % 10) + '0');

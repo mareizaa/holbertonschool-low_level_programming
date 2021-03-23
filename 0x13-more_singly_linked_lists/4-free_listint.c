@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_list - free struct
+ * free_listint - free struct
  * @head: Pointer struct
  * Return: void.
  */

@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * list_len - Lenght linked list_t list.
+ * listint_len - Lenght linked listint_t list.
  * @h: Pointer struct
  * Return: Lenght h.
  */

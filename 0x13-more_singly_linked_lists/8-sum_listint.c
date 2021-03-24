@@ -16,8 +16,9 @@ int sum_listint(listint_t *head)
 	}
 	while (aux->next != NULL)
 	{
-		aux = aux->next;
 		add = add + aux->n;
+		aux = aux->next;
 	}
+	add = add + aux->n;
 	return (add);
 }

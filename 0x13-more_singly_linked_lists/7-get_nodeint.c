@@ -3,24 +3,24 @@
 /**
  * get_nodeint_at_index - Node index
  * @head: Double Pointer struct
+ * @index: position.
  * Return: void.
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *aux;
-	unsigned int num;
+	listint_t *aux = head;
 
 	if (head != NULL)
 	{
-		aux = head;
-		for (num = 0; aux->next != NULL; num++)
+		for (; index > 0; index--)
 		{
-			aux = head->next;
-			if (num == index)
+			if (aux == NULL)
 			{
-				return (aux->next);
+				return (NULL);
 			}
+			aux = aux->next;
 		}
+		return (aux);
 	}
 	return (NULL);
 }

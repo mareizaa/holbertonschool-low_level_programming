@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * insert_dnodeint_at_index - adds a new node
  * @h: Pointer struct
@@ -33,17 +32,22 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = newnode;
 		return (newnode);
 	}
-	while (i++ < idx)
+	while (aux)
 	{
+		if (i == idx)
+		{
+			newnode->n = n;
+			newnode->prev = aux->prev;
+			newnode->next = aux;
+			aux->prev = newnode;
+			tmp = newnode->prev;
+			tmp->next = newnode;
+			return (newnode);
+		}
+		aux = aux->next;
 		if (!aux)
 			return (NULL);
-		aux = aux->next;
+		i++;
 	}
-	newnode->n = n;
-	newnode->prev = aux->prev;
-	newnode->next = aux;
-	aux->prev = newnode;
-	tmp = newnode->prev;
-	tmp->next = newnode;
-	return (newnode);
+	return (0);
 }

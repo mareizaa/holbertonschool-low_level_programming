@@ -9,6 +9,12 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	
+	if (strcmp(key, ""))
+	{
+		return (0);
+	}
+
 	unsigned long int id = hash_djb2((const unsigned char *)key);
 	unsigned long int index = id % ht->size;
 	hash_node_t *new_node;

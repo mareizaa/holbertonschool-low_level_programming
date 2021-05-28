@@ -13,10 +13,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index = id % ht->size;
 	hash_node_t *new_node;
 
-	if (key == NULL || *key == '\0')
+	if (strcmp(key, ""))
 	{
 		return (0);
 	}
+
 
 	if (ht->array[index] != NULL)
 	{

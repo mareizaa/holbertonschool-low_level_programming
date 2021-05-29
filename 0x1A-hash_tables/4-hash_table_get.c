@@ -14,8 +14,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	while (new_node != NULL)
 	{
-		if (new_node->key == key)
+		if (!strcmp(new_node->key, key))
+		{
 			return (new_node->value);
+		}
 		new_node = new_node->next;
 	}
 	return (NULL);

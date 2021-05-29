@@ -9,6 +9,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	hash_node_t *aux = NULL;
 	unsigned long int index = 0;
 	hash_node_t *new_node;
 
@@ -28,8 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new_node;
 		return (1);
 	}
-	hash_node_t *aux = ht->array[index];
-
+	aux = ht->array[index];
 	while (aux != NULL)
 	{
 		if (strcmp(aux->key, key) == 0)

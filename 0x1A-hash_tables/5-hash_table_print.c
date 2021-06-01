@@ -7,19 +7,21 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int index = 0;
+	unsigned long int index = 0, sum = 0;
 
-	if (ht == NULL)
-		printf("{}");
-
+	printf("{");
 	while (index < ht->size)
 	{
 		if (ht->array[index] != NULL)
 		{
-			printf("%s: ", ht->array[index]->key);
-			printf("%s, ", ht->array[index]->value);
+			if (sum > 0)
+				printf(", ");
+			sum++;
+			printf("'%s': ", ht->array[index]->key);
+			printf("'%s'", ht->array[index]->value);
 		}
 		index++;
 	}
+	printf("}");
 	printf("\n");
 }

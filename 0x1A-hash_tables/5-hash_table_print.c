@@ -10,6 +10,12 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int index = 0, sum = 0;
 	hash_node_t *aux = NULL;
 
+	if (ht == NULL || ht->array == NULL)
+	{
+		return;
+	}
+	
+
 	printf("{");
 	for (; index < ht->size; index++)
 	{

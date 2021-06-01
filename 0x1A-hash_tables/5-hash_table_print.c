@@ -9,6 +9,11 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int index = 0, sum = 0;
 
+	if (ht == NULL || ht->array == NULL)
+	{
+		return;
+	}
+	
 	printf("{");
 	while (index < ht->size)
 	{

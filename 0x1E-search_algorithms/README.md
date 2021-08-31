@@ -2,8 +2,8 @@
 
 ## Resources
 **Read or watch:**
-* [Search algorithm] (https://en.wikipedia.org/wiki/Search_algorithm)
-* [Space complexity (1)] (https://en.wikipedia.org/wiki/Search_algorithm)
+[Search algorithm] (https://en.wikipedia.org/wiki/Search_algorithm)
+[Space complexity (1)] (https://en.wikipedia.org/wiki/Search_algorithm)
 
 ## General
 * What is a search algorithm

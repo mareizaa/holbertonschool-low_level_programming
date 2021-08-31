@@ -2,8 +2,8 @@
 
 ## Resources
 **Read or watch:**
-[Search algorithm] (https://en.wikipedia.org/wiki/Search_algorithm)
-[Space complexity (1)] (https://en.wikipedia.org/wiki/Search_algorithm)
+* [Search algorithm](http://https://en.wikipedia.org/wiki/Search_algorithm "Search algorithm")
+* [Space complexity (1)](https://en.wikipedia.org/wiki/Search_algorithm)
 
 ## General
 * What is a search algorithm
@@ -14,17 +14,17 @@
 ## Task
 **0. Linear search**
 Write a function that searches for a value in an array of integers using the Linear search algorithm
+* Prototype : int linear_search(int *array, size_t size, int value);
+* Where array is a pointer to the first element of the array to search in
+* size is the number of elements in array
+* And value is the value to search for
+* Your function must return the first index where value is located
+* If value is not present in array or if array is NULL, your function must return -1
+* Every time you compare a value in the array to the value you are searching, you have to print this value (see example below)
 
-    * Prototype : int linear_search(int *array, size_t size, int value);
-    * Where array is a pointer to the first element of the array to search in
-    * size is the number of elements in array
-    * And value is the value to search for
-    * Your function must return the first index where value is located
-    * If value is not present in array or if array is NULL, your function must return -1
-    * Every time you compare a value in the array to the value you are searching, you have to print this value (see example below)
+`wilfried@0x1E-search_algorithms$ cat 0-main.c `
 
-​```
-wilfried@0x1E-search_algorithms$ cat 0-main.c 
+````
 #include <stdio.h>
 #include <stdlib.h>
 #include "search_algos.h"
@@ -46,8 +46,10 @@ int main(void)
     printf("Found %d at index: %d\n", 999, linear_search(array, size, 999));
     return (EXIT_SUCCESS);
 }
-wilfried@0x1E-search_algorithms$ gcc -Wall -Wextra -Werror -pedantic 0-main.c 0-linear.c -o 0-linear
-wilfried@0x1E-search_algorithms$ ./0-linear 
+```
+```
+wilfried@0x1E-search_algorithms$ gcc -Wall -Wextra -Werror -pedantic 0-main.c 0-linear.c -o 0-linear`
+wilfried@0x1E-search_algorithms$ ./0-linear `
 Value checked array[0] = [10]
 Value checked array[1] = [1]
 Value checked array[2] = [42]
